@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <style>
+            
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                 
+            }
+        
+            header {
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color:#00cba9;
+ 
+}
+.navbar {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin: 0 auto;
+ padding: 20px 15px;
+ /*color:#ff0033;*/
+ 
+}
+.navbar .links {
+
+list-style: none;
+display: flex;
+gap:2rem;
+margin-left: 25rem;
+
+
+}
+.links a{
+text-decoration: none;
+font-size: 20px;
+color:#ffff33;
+}
+
+ .main{
+    margin-top: 7rem;
+    margin-left: 5rem;
+      display: inline-grid;
+      
+}
+.main button{
+    
+    font-family: timesnewroman;
+    padding: 10px;
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 5rem;
+    margin-top: 2rem;
+  
+   
+    
+}
+.main button a{
+    text-decoration: none;
+    font-size: 25px;
+    
+}
+h2  a{
+text-decoration: none;
+color:#ffffff;
+font-family:timesnewroman;
+font-size: 30px;
+}
+.button a{
+    text-decoration: none;
+    color:#ffffff;
+    font-size: 25px;
+}
+ .logo{
+  font-family:"Lakki Reddy", serif;
+  font-weight: 200;
+  font-style:normal;
+}
+img{
+    width: 40rem;
+    height: auto;
+   
+}
+.img{
+    margin-left: 40rem;
+    margin-top: -20rem;
+    
+   
+}
+svg{
+  background-size: 100%;
+  margin-top: -14rem;
+}
+        </style>
+    </head>
+    <body>
+          <header>
+              
+            <nav class="navbar">
+                <h2 class="logo"><a href="#">JK Mart </a></h2>
+                <ul class="links">
+                      <li><a href="index.html" >Home</a></li>
+                    <li><a href="admin.html">Admin Login</a></li>
+                    <li><a href="showcompany.jsp">company</a></li>
+                    <li><a href="productList.jsp">All Product</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="button">
+                    <a href="admin.html"><i class='bx bx-user' style='color:#037b16'  ></i>ADMIN LOGIN</a>
+                </div>
+            </nav>
+        </header>
+     
+        <div class="main">
+            <button class="b1"><a href="newcompany.html"><i class='bx bxs-mouse-alt'></i> Create A new Company</a></button>
+            <button class="b3"> <a href="productList.jsp"><i class='bx bx-list-ul'></i>show Item list</a></button>
+            <button class="b4">  <a href="#"> Change Finacial</a></button>
+       </div>
+           <div class="img">
+            <img src="photo11.jpg">
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#00cba9" fill-opacity="1" d="M0,256L40,224C80,192,160,128,240,122.7C320,117,400,171,480,208C560,245,640,267,720,282.7C800,299,880,309,960,309.3C1040,309,1120,299,1200,250.7C1280,203,1360,117,1400,74.7L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+    </body>
+</html>

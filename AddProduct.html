@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color:#00cba9;
+                margin: 0;
+                padding: 0;
+                 
+              
+           
+                
+            }
+            
+            .container {
+                width:50rem;
+                margin: 50px auto;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                margin-top: 5rem;
+            }
+            h2 {
+                text-align: center;
+            }
+            label {
+                font-weight: bold;
+            }
+            input{
+                width: 100%;
+                padding: 10px;
+                margin: 8px 0;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+            input[type="submit"] {
+                width: 100%;
+                background-color:#1809fc;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+            select {
+                
+                     width: 100%;
+                padding: 10px;
+                margin: 8px 0;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+           option{
+                background:transparent;
+            }
+            header {
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color:#00cba9;
+  
+ 
+}
+.navbar {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin: 0 auto;
+ padding: 0px 15px;
+ /*color:#ff0033;*/
+ 
+}
+.navbar .links {
+
+list-style: none;
+display: flex;
+gap:2rem;
+margin-left: 25rem;
+
+
+}
+.links a{
+text-decoration: none;
+font-size: 20px;
+color:#ffff33;
+}
+h2  a{
+text-decoration: none;
+color:#ffffff;
+font-family:timesnewroman;
+font-size: 30px;
+}
+
+.button a{
+    text-decoration: none;
+    color:#ffffff;
+    font-size: 25px;
+}
+ .logo{
+  font-family:"Lakki Reddy", serif;
+  font-weight: 200;
+  font-style:normal;
+}
+        </style>
+    </head>
+
+    <body>
+            <header> 
+            <nav class="navbar">
+                <h2 class="logo"><a href="#">JK Mart </a></h2>
+                <ul class="links">
+                      <li><a href="index.html" >Home</a></li>
+                    <li><a href="admin.html">Admin Login</a></li>
+                    <li><a href="showcompany.jsp">company</a></li>
+                    <li><a href="productList.jsp">All Product</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="button">
+                    <a href="admin.html"><i class='bx bx-user' style='color:#037b16'  ></i>ADMIN LOGIN</a>
+                </div>
+            </nav>
+        </header>
+        <form action="Addproduct.jsp" method="POST">
+
+          
+            <div class="container">
+                  <h2>Add New ITEM </h2>
+                <label for="id">Product ID:</label>
+                <input type="text"  name="id" required>
+                <label for="Name">Product NAme:</label>
+                <input type="text"  name="name" required>
+                <label for="Stock">Product Stock:</label>
+                <input type="text"  name="Stock" required>
+                <label for="catagery">Product catagery:</label>
+                <input type="text"  name="catagery" required>
+                <label for="Prices">Product Prices:</label>
+                <input type="text"  name="Price" required>
+                    <label for="GST">GST:</label>
+               <select  name="GST"> <option>Add GST</option>
+                        <option>0.05%</option>
+                    </select>
+                <label for="Prices">MRP</label>
+                <input type="text"  name="MRP" required>
+                <label for="Cost">Product Cost:</label>
+                <input type="text"  name="Pcost" required>
+                <input type="submit" value="submit" />
+            </div>
+        </form>
+    </body>
+</html>

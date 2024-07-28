@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-commerce Company Registration</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+         background: url(svgadmin.png);
+                background-repeat: no-repeat;
+                font-family: timesnewroman;
+    }
+    .container {
+        width:50rem;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+        text-align: center;
+    }
+    label {
+        font-weight: bold;
+    }
+    input[type="text"], input[type="email"], input[type="password"],input[type="date"], select {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        width: 100%;
+        background-color:#1809fc;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    .h2{
+        background-color:#00cccc;
+    }
+    
+ header {
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color:#00cba9;
+  
+ 
+}
+.navbar {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin: 0 auto;
+ padding: 0px 15px;
+ /*color:#ff0033;*/
+ 
+}
+.navbar .links {
+
+list-style: none;
+display: flex;
+gap:2rem;
+margin-left: 25rem;
+
+
+}
+.links a{
+text-decoration: none;
+font-size: 20px;
+color:#ffff33;
+}
+h2  a{
+text-decoration: none;
+color:#ffffff;
+font-family:timesnewroman;
+font-size: 30px;
+}
+
+.button a{
+    text-decoration: none;
+    color:#ffffff;
+    font-size: 25px;
+}
+ .logo{
+  font-family:"Lakki Reddy", serif;
+  font-weight: 200;
+  font-style:normal;
+}
+
+</style>
+</head>
+<body>
+    <header> 
+            <nav class="navbar">
+                <h2 class="logo"><a href="#">JK Mart </a></h2>
+                <ul class="links">
+                      <li><a href="index.html" >Home</a></li>
+                    <li><a href="admin.html">Admin Login</a></li>
+                    <li><a href="showcompany.jsp">company</a></li>
+                    <li><a href="productList.jsp">All Product</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="button">
+                    <a href="admin.html"><i class='bx bx-user' style='color:#037b16'  ></i>ADMIN LOGIN</a>
+                </div>
+            </nav>
+        </header>
+<div class="container">
+    <h2>Add Company Registration</h2>
+    <form action="newcompany.jsp">
+        <h2 class="h2"> Basic Details </h2>
+        <label for="company_name">Company Name:</label>
+        <input type="text" id="company_name" name="company_name" required>
+         <label for="company_name">Company Location :</label>
+       
+         <input type="text" name="location" required>
+
+     <label for="address">Full Address</label>
+     <input type="text" name="address" value="" required />
+ 
+        <label for="City">City</label>
+        <input type="text" id="city" name="city" required>
+        
+        <label for="State">State</label>
+        <input type="text" id="#" name="State" required>
+              
+        <label for="PinCode">Pin Code</label>
+        <input type="text" id="#" name="PinCode" required>
+              
+        <label for="Email">Email</label>
+        <input type="text" id="#" name="Email" required>
+              
+        <label for="Mobline">Mobile</label>
+        <input type="text" id="#" name="Mobile" required>
+        
+        
+        <h2 class="h2">Registration Details</h2>
+              
+        <label for="GSTNO">GST NO</label>
+        <input type="text" id="#" name="GSTNO" required>
+              
+        <label for="VATNO">VAT No</label>
+        <input type="text" id="#" name="VAT No" required>
+              
+        <label for="CSTNO">CST NO</label>
+        <input type="text" id="#" name="CSTNO" required>
+        
+       
+        
+        <h2 class="h2">Financial Year Date Range </h2>
+         <label for="date">Faizancial Year Starting Date </label>
+        <input type="date" name="date" required>
+        
+            <label for="date">Faizancial Year Will Close On </label>
+        <input type="date" name="cdate" required>
+
+        <input type="submit" value="Cteate Company">
+    </form>
+</div>
+
+</body>
+</html>

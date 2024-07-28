@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+        <script>
+            const btn = document.getElementById("add-button");
+const formClone = document.querySelector(".clone");
+const parentForm = document.querySelector(".wrappers");
+
+btn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const clone = formClone.cloneNode(true);
+  clone.querySelectorAll("input").forEach((e) => {
+    e.value = "";
+  });
+  parentForm.appendChild(clone);
+
+  const deleteForm = document.createElement("button");
+  deleteForm.innerText = "X";
+  deleteForm.classList.add("btn", "btn-danger", "btn-sm");
+  clone.appendChild(deleteForm);
+
+  deleteForm.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.target.parentElement.remove();
+  });
+});
+
+const payment = document.querySelector(".type-payment");
+const price = document.querySelector(".input-price");
+const pay = document.querySelector(".input-pay");
+const allInputSum = document.querySelectorAll(".sum");
+const inputTotal = document.querySelector(".input-total");
+
+let result;
+let totalValue;
+function handleSelectChange(event) {
+  result = payment.value;
+  totalValue = pay.value - price.value;
+  inputTotal.value = totalValue.toLocaleString();
+
+  let inputSum = Array.from(allInputSum).filter((e) => {
+    if (e.id == result) {
+      e.value = inputTotal.value;
+    }
+  });
+}
+            </script>
+    </head>
+    <body>
+      <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">-->
+
+<button id="add-button" class="btn btn-primary mb-3">Add Form</button>
+<div class="wrappers">
+  <div class="row clone mb-2">
+    <div class="col px-0">
+      <div class="input-group mb-2">
+        <input
+          type="number"
+          class="form-control rounded-0 input-price"
+          placeholder="Price"
+          onchange="handleSelectChange(event)"
+        />
+      </div>
+    </div>
+    <div class="col px-0">
+      <div class="input-group mb-2">
+        <input
+          type="number"
+          class="form-control rounded-0 input-pay"
+          placeholder="Pay"
+          onchange="handleSelectChange(event)"
+        />
+      </div>
+    </div>
+    <div class="col-auto px-0">
+      <div class="input-group mb-2">
+        <select
+          class="form-control rounded-0 type-payment"
+          role="button"
+          onchange="handleSelectChange(event)"
+        >
+          <option value="CASH">CASH</option>
+          <option value="DEBIT">DEBIT</option>
+          <option value="CASHLESS">CASHLESS</option>
+        </select>
+      </div>
+    </div>
+    <div class="col px-0">
+      <div class="input-group mb-2">
+        <input
+          onchange="handleSelectChange(event)"
+          value="0.00"
+          type="text"
+          class="form-control rounded-0 input-total"
+          disabled
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<div class="pt-4">
+  <div class="row">
+    <div class="col-md-8 pr-0">
+      <input
+        class="form-control total rounded-0"
+        disabled
+        placeholder="TOTAL CASH"
+      />
+    </div>
+    <div class="col-md-4 pl-0">
+      <input
+        id="CASH"
+        class="form-control rounded-0 sum"
+        disabled
+        placeholder="0.00"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 pr-0">
+      <input
+        class="form-control total rounded-0"
+        disabled
+        placeholder="TOTAL DEBIT"
+      />
+    </div>
+    <div class="col-md-4 pl-0">
+      <input
+        id="DEBIT"
+        class="form-control rounded-0 sum"
+        disabled
+        placeholder="0.00"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 pr-0">
+      <input
+        class="form-control total rounded-0"
+        disabled
+        placeholder="TOTAL CASHLESS"
+      />
+    </div>
+    <div class="col-md-4 pl-0">
+      <input
+        id="CASHLESS"
+        class="form-control rounded-0 sum"
+        disabled
+        placeholder="0.00"
+      />
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+    </body>
+</html>
+

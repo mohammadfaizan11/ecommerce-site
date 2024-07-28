@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+          body{
+                width: 100%;
+                height:80%;
+                display: block;
+                box-sizing: border-box;
+                background: url(svgadmin.png);
+                background-repeat: no-repeat;
+                font-family: timesnewroman;
+
+            }
+            .main{
+                width: 28rem;
+                height: 27rem;
+                border: 2px solid white;
+                margin-left: 28rem;
+                margin-top: 5rem;
+                border-radius: 10px;
+                background: rgb(255,255,255,0.0);
+                backdrop-filter: blur(15px);
+                box-shadow: 0px 0px 10px 0px black;
+                
+                
+            }
+            .main2{
+                margin-left: 4rem;
+                line-height: 3rem;
+                margin-top: 1rem;
+            }
+            input{
+                width: 20rem;
+                padding: 5px;
+                font-size: 18px;
+                background: transparent;
+                border: 2px solid white;
+                border-radius: 5px;
+                margin-top: -5px;
+                color: white;
+            }
+            h1{
+                justify-content: center;
+                position: relative;
+                text-align: center;
+                font-size: 40px;
+                color: white;
+            }
+            .SUBMIT {
+                width: 10rem;
+                background-color:#60ff80;
+                color: white;
+                margin-left: 10rem;
+                margin-top: 3rem;
+                font-size: 18px;
+                padding: 7px 5px;
+                border:2px solid white;
+                border-radius: 10px;
+                
+            }
+            label{
+                display: block;
+                position: fixed;
+               color: white;
+                font-size: 15px;
+                
+            }
+            
+ header {
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color:#00cba9;
+  
+ 
+}
+.navbar {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin: 0 auto;
+ padding: 0px 15px;
+ /*color:#ff0033;*/
+ 
+}
+.navbar .links {
+
+list-style: none;
+display: flex;
+gap:2rem;
+margin-left: 25rem;
+
+
+}
+.links a{
+text-decoration: none;
+font-size: 20px;
+color:#ffff33;
+}
+h2  a{
+text-decoration: none;
+color:#ffffff;
+font-family:timesnewroman;
+font-size: 30px;
+}
+
+.button a{
+    text-decoration: none;
+    color:#ffffff;
+    font-size: 25px;
+}
+ .logo{
+  font-family:"Lakki Reddy", serif;
+  font-weight: 200;
+  font-style:normal;
+}
+            </style>
+    </head>
+    <body>
+         <header> 
+            <nav class="navbar">
+                <h2 class="logo"><a href="#">JK Mart </a></h2>
+                <ul class="links">
+                      <li><a href="index.html" >Home</a></li>
+                    <li><a href="admin.html">Admin Login</a></li>
+                    <li><a href="showcompany.jsp">company</a></li>
+                    <li><a href="productList.jsp">All Product</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="button">
+                    <a href="admin.html"><i class='bx bx-user' style='color:#037b16'  ></i>ADMIN LOGIN</a>
+                </div>
+            </nav>
+        </header>
+     <form action="admin.jsp">
+            <div class="main">
+            <h1>ADMIN LOGIN</h1>
+            <div class="main2">
+       <label for="adminname">Admin Name:</label><br>
+            <input type="text" id="username" name="adminname" required><br>
+
+            <label for="adminpass">Admin Password:</label><br>
+            <input type="password" id="password" name="adminpass" required><br>
+            </div>
+
+            <button class="SUBMIT" type="submit">LOGIN</button>
+            </div>
+      </form>
+    </body>
+</html>

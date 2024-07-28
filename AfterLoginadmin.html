@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            
+           .main{
+                margin-left: 30%;
+                position: relative;
+                margin-top: 10%;
+            }
+            .main button{
+                width: 15rem;
+                font-size: 20px;
+                border: 2px solid white;
+                border-radius: 10px;
+                padding: 10px;
+                background:transparent;
+                box-shadow: 0px 0px 10px 0px black;
+                
+                
+            }
+            button a{
+                text-decoration: none;
+                color: white;
+            }
+            body{
+                background:url(svg3.png);
+                background-repeat: no-repeat;
+            
+                display:block;
+           
+                
+            }
+            
+ header {
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /*background-color:#00cba9;*/
+  
+ 
+}
+.navbar {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin: 0 auto;
+ padding: 0px 15px;
+ /*color:#ff0033;*/
+ 
+}
+.navbar .links {
+
+list-style: none;
+display: flex;
+gap:2rem;
+margin-left: 25rem;
+
+
+}
+.links a{
+text-decoration: none;
+font-size: 20px;
+color:#ffff33;
+}
+h2  a{
+text-decoration: none;
+color:#ffffff;
+font-family:timesnewroman;
+font-size: 30px;
+margin-left: 5rem;
+}
+
+.button a{
+    text-decoration: none;
+    color:#ffffff;
+    font-size: 25px;
+}
+ .logo{
+  font-family:"Lakki Reddy", serif;
+  font-weight: 200;
+  font-style:normal;
+}
+            </style>
+    </head>
+    <body>
+            <header> 
+            <nav class="navbar">
+                <h2 class="logo"><a href="#">JK Mart </a></h2>
+                <ul class="links">
+                      <li><a href="index.html" >Home</a></li>
+                    <li><a href="admin.html">Admin Login</a></li>
+                    <li><a href="showcompany.jsp">company</a></li>
+                    <li><a href="productList.jsp">All Product</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="button">
+                    <a href="admin.html"><i class='bx bx-user' style='color:#037b16'  ></i>ADMIN LOGIN</a>
+                </div>
+            </nav>
+        </header>
+        <div class="main">
+        <button><a href="showproductslist.jsp" >Show Product List</a> </button>
+        <button class="b2"><a href="AddProduct.html" >Add  New Product</a> </button>
+         </div>
+    </body>
+</html>
